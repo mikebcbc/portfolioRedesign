@@ -1,0 +1,25 @@
+/*** Set Font Size for Site **/
+
+:root {
+	font-size: 18px;
+}
+
+/*** Base Body Styles **/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $dosis;
+	color: $white-color;
+	background-color: $lightblue-color;
+	padding: 10px;
+	.home-wrap {
+		background-image: url('../imgs/texture.png');
+	}
+}
+
+a {
+	text-decoration: none;	
+}

@@ -1,0 +1,74 @@
+.skill-list {
+	list-style: none;
+	padding: 0;
+	li {
+		display: block;
+		position: relative;
+		height: 60px;
+		margin: 10px auto;
+		width: 90%;
+		text-align: center;
+		font-size: 1.2em;
+		font-weight: 500;
+		font-family: 'PT Sans';
+		@media only screen and (min-width:769px) {
+			display: inline-block;
+			width: 44%;
+			margin: 10px;
+		}
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			border-radius: 20px;
+			margin-top: 40px;
+		}
+		&:before {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 20px;
+			background: #eeeeee;
+		}
+		&:after {
+			background-color: $nav-color;
+			background: repeating-linear-gradient(-45deg, $nav-color, $nav-color 10px, lighten($nav-color, 3) 10px, lighten($nav-color, 3) 20px);
+			height: 16px;
+			top: 2px;
+			right: 95%;
+			bottom: 2px;
+			left: 2px;
+			animation: fill 2s both;
+		}
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}):after {
+				animation-delay:(#{$i * 0.5}s);
+			}
+		}
+		&[type="html5-css3"]:after {
+	      right: 2px;
+	    }
+	    &[type="sass"]:after {
+	      right: 15%;
+	    }
+	    &[type="js"]:after {
+	      right: 25%;
+	    }
+	    &[type="js-frame"]:after {
+	      right: 10%;
+	    }
+	    &[type="gulp"]:after {
+	      right: 20%;
+	    }
+	    &[type="skillbars"]:after {
+	      right: 2px;
+	    }
+	}
+}
+
+@keyframes fill {
+  from {
+    right: 100%;
+  }
+}
