@@ -3,6 +3,7 @@
 	justify-content: center;
 	height: 100px;
 	align-items: center;
+	padding: 10px;
 	.contact-info {
 		padding: 0 50px;
 	}
@@ -16,32 +17,5 @@
 		font-size: 1.8em;
 		color: $darkblue-color;
 		font-family: $lato;
-	}
-}
-
-.contact-cta {
-	position: absolute;
-	right: 10px;
-	width: 100px;
-	&:after {
-		content: '';
-		width: 0; 
-		height: 0; 
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-top: 10px solid $white-color;
-		margin: 0 auto;
-		display: block;
-	}
-	p {
-	font-family: $lato;
-	font-weight: bold;
-	margin: 0;
-	font-size: 0.85em;
-	text-align: center;
-	color: $darkblue-color;
-	background-color: $white-color;
-	border-radius: 25%;
-	padding: 5px 10px;
 	}
 }

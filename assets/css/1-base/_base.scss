@@ -14,10 +14,21 @@ body {
 	font-family: $dosis;
 	color: $white-color;
 	background-color: $lightblue-color;
-	padding: 10px;
-	.home-wrap {
-		background-image: url('../imgs/texture.png');
-	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3 {
+	font-family: $lato;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 5.55em;
 }
 
 a {

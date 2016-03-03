@@ -1,0 +1,76 @@
+.intro-wrap {
+	background-image: url('../imgs/texture.png');
+	background-color: $darkblue-color;
+	padding: 10px;
+	.nav-logo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.contact-cta {
+		width: 100px;
+		margin-bottom: auto;
+		&:after {
+			content: '';
+			width: 0; 
+			height: 0; 
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 10px solid $white-color;
+			margin: 0 auto;
+			display: block;
+		}
+		p {
+		font-family: $lato;
+		font-weight: bold;
+		margin: 0;
+		font-size: 0.85em;
+		text-align: center;
+		color: $darkblue-color;
+		background-color: $white-color;
+		border-radius: 25%;
+		padding: 5px 10px;
+		}
+	}
+	svg {
+		path, rect {
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: fill-logo 0.4s linear 1.3s forwards,
+					   dash 2.7s linear forwards;
+			fill-opacity: 0;
+			transform: translateX(-4px);
+		}
+	}
+	.intro-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		.greeting {
+			margin-bottom: 35px;
+			color: $lightblue-color;
+		}
+		.intro-copy {
+			width: 50%;
+			margin-bottom: 35px;
+			font-size: 1.125em;
+		}
+	}
+}
+
+
+
+
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill-logo {
+	to {
+		fill-opacity: 1;
+	}
+}
