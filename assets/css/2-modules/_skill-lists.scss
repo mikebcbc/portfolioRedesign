@@ -3,19 +3,18 @@
 	padding: 0;
 	color: $darkblue-color;
 	li {
-		display: block;
+		display: inline-block;
 		position: relative;
 		height: 60px;
 		margin: 10px auto;
-		width: 90%;
+		width: 44%;
 		text-align: center;
 		font-size: 1.2em;
 		font-weight: 500;
 		font-family: 'Lato';
-		@media only screen and (min-width:769px) {
-			display: inline-block;
-			width: 44%;
-			margin: 10px;
+		@media only screen and (max-width:769px) {
+			width: 48.5%;
+			padding: 0 5px;
 		}
 		&:before,
 		&:after {
@@ -62,7 +61,7 @@
 	    &[type="gulp"]:after {
 	      right: 20%;
 	    }
-	    &[type="skillbars"]:after {
+	    &[type="seo"]:after {
 	      right: 2px;
 	    }
 	}

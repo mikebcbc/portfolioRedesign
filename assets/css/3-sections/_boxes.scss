@@ -7,6 +7,7 @@
 	.top-boxes {
 		display: flex;
 		width: 100vw;
+		flex-wrap: wrap;
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-bottom: 5px solid $darkblue-color;
@@ -19,6 +20,7 @@
 	.bottom-boxes {
 		display: flex;
 		width: 100vw;
+		flex-wrap: wrap;
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-top: 5px solid $darkblue-color;
@@ -58,6 +60,9 @@
 		p {
 			padding: 25px 10%;
 			background-color: $darkblue-color;
+		}
+		@media (max-width: 769px) {
+			flex-basis: 100%;
 		}
 	}
 }
