@@ -55,6 +55,9 @@
 			width: 50%;
 			margin-bottom: 35px;
 			font-size: 1.125em;
+			@media (max-width: 769px) {
+				width: 100%;
+			}
 		}
 	}
 }

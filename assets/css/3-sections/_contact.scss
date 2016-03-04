@@ -4,6 +4,12 @@
 	height: 100px;
 	align-items: center;
 	padding: 10px;
+	flex-wrap: wrap;
+	@media (max-width: 769px) {
+		display: block;
+		text-align: center;
+		height: 120px;
+}
 	.contact-info {
 		padding: 0 50px;
 	}
@@ -11,11 +17,18 @@
 		color: $grey-color;
 		font-weight: bold;
 		font-size: 1em;
+		@media (max-width: 769px) {
+			display: block;
+			text-align: center;
+		}
 	}
 	.info {
 		font-weight: bold;
 		font-size: 1.8em;
 		color: $darkblue-color;
 		font-family: $lato;
+		@media (max-width: 769px) {
+			font-size: 1.4em;
+		}
 	}
 }

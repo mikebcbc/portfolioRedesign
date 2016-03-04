@@ -11,10 +11,23 @@
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-bottom: 5px solid $darkblue-color;
+			h2 {
+				margin: 25px 0 0 0;
+			}
+			@media (max-width: 769px) {
+				border-right: none;
+			}
 		}
 		.right-box {
 			border-left: 5px solid $darkblue-color;
 			border-bottom: 5px solid $darkblue-color;
+			h2 {
+				margin: 0 0 25px 0;
+			}
+			@media (max-width: 769px) {
+				border-left: none;
+				border-top: 5px solid $darkblue-color;
+			}
 		}
 	}
 	.bottom-boxes {
@@ -24,10 +37,23 @@
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-top: 5px solid $darkblue-color;
+			h2 {
+				margin: 25px 0 0 0;
+			}
+			@media (max-width: 769px) {
+				border-right: none;
+				border-bottom: 5px solid $darkblue-color;
+			}
 		}
 		.right-box {
 			border-left: 5px solid $darkblue-color;
 			border-top: 5px solid $darkblue-color;
+			h2 {
+				margin: 0 0 25px 0;
+			}
+			@media (max-width: 769px) {
+				border-left: none;
+			}
 		}
 	}
 	.left-box {
@@ -48,7 +74,6 @@
 		align-items: center;
 		h2 {
 			color: $darkblue-color;
-			margin: 25px 0;
 		}
 		img {
 			width: 200px;
