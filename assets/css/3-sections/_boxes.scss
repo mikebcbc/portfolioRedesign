@@ -1,0 +1,63 @@
+.boxes-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url('../imgs/body-texture.png');
+	background-repeat: repeat;
+	text-align: center;
+	.top-boxes {
+		display: flex;
+		width: 100vw;
+		.left-box {
+			border-right: 5px solid $darkblue-color;
+			border-bottom: 5px solid $darkblue-color;
+		}
+		.right-box {
+			border-left: 5px solid $darkblue-color;
+			border-bottom: 5px solid $darkblue-color;
+		}
+	}
+	.bottom-boxes {
+		display: flex;
+		width: 100vw;
+		.left-box {
+			border-right: 5px solid $darkblue-color;
+			border-top: 5px solid $darkblue-color;
+		}
+		.right-box {
+			border-left: 5px solid $darkblue-color;
+			border-top: 5px solid $darkblue-color;
+		}
+	}
+	.left-box {
+		flex-direction: column;
+		p {
+		margin-bottom: 25px;
+		}
+	}
+	.right-box {
+		flex-direction: column-reverse;
+		p {
+			margin-top: 25px;
+		}
+	}
+	.box {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		h2 {
+			color: $darkblue-color;
+			margin: 25px 0;
+		}
+		img {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			box-shadow: 0 0 10px #222;
+			margin: 25px 0;
+		}
+		p {
+			padding: 25px 10%;
+			background-color: $darkblue-color;
+		}
+	}
+}
