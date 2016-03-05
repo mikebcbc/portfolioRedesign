@@ -11,26 +11,46 @@
 		width: 100px;
 		margin-bottom: auto;
 		text-decoration: none;
+    	transition: margin 250ms ease-in-out;
+    	position: relative;
+    	z-index: 1;
+    	&:hover:after {
+			margin: 0 auto;
+			border-top-color: #eafcff;
+    	}
 		&:after {
 			content: '';
 			width: 0; 
 			height: 0; 
-			border-left: 20px solid transparent;
-			border-right: 20px solid transparent;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
 			border-top: 10px solid $white-color;
-			margin: 0 auto;
+			margin: -2px auto;
 			display: block;
+		    transition: margin 100ms linear;
+		    z-index: -1;
+		    left: 34%;
+		    position: absolute;
+		}
+		&.contact-cta-open {
+			margin-top: -35px;
+			&:after {
+				margin-top: -10px;
+			}
 		}
 		p {
-		font-family: $lato;
-		font-weight: bold;
-		margin: 0;
-		font-size: 0.85em;
-		text-align: center;
-		color: $darkblue-color;
-		background-color: $white-color;
-		border-radius: 25%;
-		padding: 5px 10px;
+			font-family: $lato;
+			font-weight: bold;
+			margin: 0;
+			font-size: 0.85em;
+			text-align: center;
+			color: $darkblue-color;
+			background-color: $white-color;
+			border-radius: 25%;
+			padding: 5px 10px;
+    		&:hover {
+    			background-color: #eafcff;
+    		}
 		}
 	}
 	svg {

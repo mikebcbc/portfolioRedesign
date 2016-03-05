@@ -2427,16 +2427,32 @@ a {
   .intro-wrap .contact-cta {
     width: 100px;
     margin-bottom: auto;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: margin 250ms ease-in-out;
+    transition: margin 250ms ease-in-out;
+    position: relative;
+    z-index: 1; }
+    .intro-wrap .contact-cta:hover:after {
+      margin: 0 auto;
+      border-top-color: #eafcff; }
     .intro-wrap .contact-cta:after {
       content: '';
       width: 0;
       height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
       border-top: 10px solid #d7e6e6;
-      margin: 0 auto;
-      display: block; }
+      margin: -2px auto;
+      display: block;
+      -webkit-transition: margin 100ms linear;
+      transition: margin 100ms linear;
+      z-index: -1;
+      left: 34%;
+      position: absolute; }
+    .intro-wrap .contact-cta.contact-cta-open {
+      margin-top: -35px; }
+      .intro-wrap .contact-cta.contact-cta-open:after {
+        margin-top: -10px; }
     .intro-wrap .contact-cta p {
       font-family: "Lato", sans-serif;
       font-weight: bold;
@@ -2448,6 +2464,8 @@ a {
       -webkit-border-radius: 25%;
               border-radius: 25%;
       padding: 5px 10px; }
+      .intro-wrap .contact-cta p:hover {
+        background-color: #eafcff; }
   .intro-wrap svg path, .intro-wrap svg rect {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;

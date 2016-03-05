@@ -5,5 +5,6 @@ $(document).ready(function(){
 	$('.contact-cta').click(function() {
 		$('.contact-bar').toggleClass("contact-bar-open");
 		$('.contact-info').toggleClass("contact-info-open");
+		$('.contact-cta').toggleClass("contact-cta-open");
 	});
 });
