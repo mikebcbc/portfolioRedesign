@@ -37,8 +37,8 @@
 		path, rect {
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
-			animation: fill-logo 0.4s linear 1.3s forwards,
-					   dash 2.7s linear forwards;
+			animation: fill-logo 0.4s linear 1.8s forwards,
+					   dash 2.7s linear forwards 0.5s;
 			fill-opacity: 0;
 			transform: translateX(-4px);
 		}

@@ -27,6 +27,9 @@
 			@media (max-width: 769px) {
 				border-left: none;
 				border-top: 5px solid $darkblue-color;
+				h2 {
+					margin: 25px 0 0 0;
+				}
 			}
 		}
 	}
@@ -53,6 +56,9 @@
 			}
 			@media (max-width: 769px) {
 				border-left: none;
+				h2 {
+					margin: 25px 0 0 0;
+				}
 			}
 		}
 	}
@@ -61,11 +67,23 @@
 		p {
 		margin-bottom: 25px;
 		}
+		@media (max-width: 769px) {
+			flex-direction: column;
+			p {
+				margin-top: 25px;
+			}
+		}
 	}
 	.right-box {
 		flex-direction: column-reverse;
 		p {
 			margin-top: 25px;
+		}
+		@media (max-width: 769px) {
+			flex-direction: column;
+			p {
+				margin-bottom: 25px;
+			}
 		}
 	}
 	.box {
