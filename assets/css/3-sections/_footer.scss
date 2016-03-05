@@ -1,0 +1,26 @@
+.footer-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: url('../imgs/texture.png');
+	background-color: $darkblue-color;
+	padding: 0px 40px;
+	.copyright-text {
+		width: 280px;
+		font-family: $lato;
+		font-weight: bold;
+	}
+	.logo {
+		svg {
+			width: 150px;
+		}
+	}
+	.social-icons {
+		width: 280px;
+		text-align: center;
+		img {
+			width: 39px;
+			margin: 0 10px;
+		}
+	}
+}
