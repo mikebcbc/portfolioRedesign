@@ -16,17 +16,6 @@ gulp.task('browser-refresh', function () {
 });
 
 /**
-* Gulp Minify CSS
-**/
-
-gulp.task('minify-css', function() {
-  return gulp.src('assets/css/main.css')
-    .pipe(cleanCSS())
-    .pipe(rename('main-min.css'))
-    .pipe(gulp.dest('assets/css'));
-});
-
-/**
  * Run browsersyc w/ sass.
  */
 gulp.task('browser-sync', ['sass'], function() {
@@ -37,8 +26,6 @@ gulp.task('browser-sync', ['sass'], function() {
         notify: false
     });
 });
-
-
 
 
 /**
@@ -55,13 +42,25 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('assets/css'));
 });
 
+/**
+* Gulp Minify CSS
+**/
+
+gulp.task('minify-css', function() {
+  return gulp.src('assets/css/main.css')
+    .pipe(cleanCSS())
+    .pipe(rename('main-min.css'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('assets/css'));
+});
+
 
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files and JS files. And CSS!! :)
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch(['assets/css/**', '!assets/css/main-min.css', '!assets/css/main.css'], ['sass']);
     gulp.watch(['index.html'], ['browser-refresh']);
     gulp.watch(['assets/js/**'], ['browser-refresh']);
     gulp.watch(['assets/css/main.css'], ['minify-css']);
@@ -75,3 +74,5 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+

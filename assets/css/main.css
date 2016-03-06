@@ -2193,7 +2193,7 @@ body {
   font-family: "Dosis", sans-serif;
   color: #d7e6e6;
   background-color: #9cdade;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 p {
   margin: 0;
