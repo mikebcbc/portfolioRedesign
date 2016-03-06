@@ -1,11 +1,12 @@
 @import "0-tools/fonts";
-@import "0-tools/bourbon/bourbon";
+@import "0-tools/fontello";
 @import "0-tools/normalize";
 @import "0-tools/animations";
 
 @import "1-base/variables";
 @import "1-base/base";
 
+@import "2-modules/nav-button";
 @import "2-modules/nav-menu";
 @import "2-modules/skill-lists";
 

@@ -1,5 +1,62 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 @import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?81353953");
+  src: url("../fonts/fontello.eot?81353953#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?81353953") format("woff"), url("../fonts/fontello.ttf?81353953") format("truetype"), url("../fonts/fontello.svg?81353953#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?81353953#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-facebook-circled:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-github-circled:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-linkedin-circled:before {
+  content: '\e802'; }
+
+/* '' */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2174,10 +2231,14 @@ th {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: "Dosis", sans-serif;
   color: #d7e6e6;
-  background-color: #9cdade; }
+  background-color: #9cdade;
+  overflow-x: hidden; }
 
 p {
   margin: 0;
@@ -2199,7 +2260,8 @@ a {
 
 .nav-wrap {
   margin-bottom: auto;
-  width: 100px; }
+  width: 100px;
+  z-index: 2; }
   .nav-wrap #nav-menu {
     width: 40px;
     height: 45px;
@@ -2210,6 +2272,9 @@ a {
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer; }
+    @media (max-width: 769px) {
+      .nav-wrap #nav-menu {
+        margin-left: auto; } }
     .nav-wrap #nav-menu span {
       display: block;
       position: absolute;
@@ -2268,6 +2333,67 @@ a {
       left: calc(50% - 5px);
       top: 24px; }
 
+menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  padding-top: 10px;
+  background: #296061;
+  background-image: url("../imgs/texture.png");
+  -webkit-box-shadow: inset -5px -10px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset -5px -10px 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(-220px);
+      -ms-transform: translateX(-220px);
+          transform: translateX(-220px);
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+  padding: 50px 0;
+  margin: 0;
+  z-index: 1; }
+  menu ul {
+    list-style-type: none;
+    padding: 0; }
+  menu li a {
+    display: block;
+    margin: 15px 10px;
+    padding-top: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #9cdade;
+    text-decoration: none;
+    border-bottom: 2px solid #9cdade;
+    width: 150px;
+    -webkit-transition: width 250ms ease-in-out;
+    transition: width 250ms ease-in-out; }
+    menu li a:hover {
+      width: 200px; }
+  menu .contact-menu a {
+    background-color: #9cdade;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    color: #296061;
+    -webkit-transition: none;
+    transition: none;
+    width: 200px; }
+    menu .contact-menu a:hover {
+      color: #9cdade;
+      background-color: #296061;
+      outline: 4px solid #9cdade;
+      -webkit-transition: outline 200ms ease-in-out;
+      transition: outline 200ms ease-in-out; }
+
+.menu-active, .menu-active body {
+  overflow-y: hidden; }
+
+.menu-active menu {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
+
 .skill-list {
   list-style: none;
   padding: 0;
@@ -2307,39 +2433,61 @@ a {
       top: 2px;
       right: 95%;
       bottom: 2px;
-      left: 2px;
-      -webkit-animation: fill 2s both;
-              animation: fill 2s both; }
-    .skill-list li:nth-child(1):after {
-      -webkit-animation-delay: 0.5s;
-              animation-delay: 0.5s; }
-    .skill-list li:nth-child(2):after {
-      -webkit-animation-delay: 1s;
-              animation-delay: 1s; }
-    .skill-list li:nth-child(3):after {
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s; }
-    .skill-list li:nth-child(4):after {
-      -webkit-animation-delay: 2s;
-              animation-delay: 2s; }
-    .skill-list li:nth-child(5):after {
-      -webkit-animation-delay: 2.5s;
-              animation-delay: 2.5s; }
-    .skill-list li:nth-child(6):after {
-      -webkit-animation-delay: 3s;
-              animation-delay: 3s; }
-    .skill-list li[type="html5-css3"]:after {
-      right: 2px; }
-    .skill-list li[type="sass"]:after {
-      right: 15%; }
-    .skill-list li[type="js"]:after {
-      right: 25%; }
-    .skill-list li[type="js-frame"]:after {
-      right: 10%; }
-    .skill-list li[type="gulp"]:after {
-      right: 20%; }
-    .skill-list li[type="seo"]:after {
-      right: 2px; }
+      left: 2px; }
+
+.animating-bar li:nth-child(1):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
+
+.animating-bar li:nth-child(2):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+.animating-bar li:nth-child(3):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s; }
+
+.animating-bar li:nth-child(4):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+
+.animating-bar li:nth-child(5):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s; }
+
+.animating-bar li:nth-child(6):after {
+  -webkit-animation: fill 2s both;
+          animation: fill 2s both;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
+
+.animating-bar li[type="html5-css3"]:after {
+  right: 2px; }
+
+.animating-bar li[type="sass"]:after {
+  right: 15%; }
+
+.animating-bar li[type="js"]:after {
+  right: 25%; }
+
+.animating-bar li[type="js-frame"]:after {
+  right: 10%; }
+
+.animating-bar li[type="gulp"]:after {
+  right: 20%; }
+
+.animating-bar li[type="seo"]:after {
+  right: 2px; }
 
 @-webkit-keyframes fill {
   from {
@@ -2372,11 +2520,6 @@ a {
   .contact-bar.contact-bar-open {
     height: 100px;
     padding: 10px; }
-  @media (max-width: 769px) {
-    .contact-bar {
-      display: block;
-      text-align: center;
-      height: 120px; } }
   .contact-bar .contact-info {
     padding: 0 50px;
     -webkit-transform: scale(0.8);
@@ -2429,9 +2572,10 @@ a {
     margin-bottom: auto;
     text-decoration: none;
     -webkit-transition: margin 250ms ease-in-out;
-    transition: margin 250ms ease-in-out;
-    position: relative;
-    z-index: 1; }
+    transition: margin 250ms ease-in-out; }
+    @media (max-width: 769px) {
+      .intro-wrap .contact-cta {
+        display: none; } }
     .intro-wrap .contact-cta:hover:after {
       margin: 0 auto;
       border-top-color: #eafcff; }
@@ -2445,10 +2589,7 @@ a {
       margin: -2px auto;
       display: block;
       -webkit-transition: margin 100ms linear;
-      transition: margin 100ms linear;
-      z-index: -1;
-      left: 34%;
-      position: absolute; }
+      transition: margin 100ms linear; }
     .intro-wrap .contact-cta.contact-cta-open {
       margin-top: -35px; }
       .intro-wrap .contact-cta.contact-cta-open:after {
@@ -2466,7 +2607,18 @@ a {
       padding: 5px 10px; }
       .intro-wrap .contact-cta p:hover {
         background-color: #eafcff; }
-  .intro-wrap svg path, .intro-wrap svg rect {
+  @media (max-width: 769px) {
+    .intro-wrap .logo {
+      margin-top: -10px;
+      width: 150px;
+      -webkit-box-ordinal-group: 0;
+      -webkit-order: -1;
+          -ms-flex-order: -1;
+              order: -1; } }
+  @media (max-width: 769px) {
+    .intro-wrap .logo svg {
+      width: 100%; } }
+  .intro-wrap .logo svg path, .intro-wrap .logo svg rect {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     -webkit-animation: fill-logo 0.4s linear 1.8s forwards, dash 2.7s linear forwards 0.5s;
@@ -2671,10 +2823,14 @@ a {
     width: 150px; }
   .footer-wrap .social-icons {
     width: 280px;
-    text-align: center; }
-    .footer-wrap .social-icons img {
-      width: 39px;
-      margin: 0 10px; }
+    text-align: center;
+    height: 60px; }
+    .footer-wrap .social-icons div {
+      display: inline-block;
+      font-size: 45px;
+      color: #9cdade; }
+      .footer-wrap .social-icons div:hover {
+        color: #ff8300; }
   @media (max-width: 769px) {
     .footer-wrap {
       -webkit-box-orient: vertical;
@@ -2691,9 +2847,16 @@ a {
           -ms-flex-align: center;
                   -ms-grid-row-align: center;
               align-items: center;
-      text-align: center; }
+      text-align: center;
+      padding-bottom: 10px; }
       .footer-wrap .logo {
         -webkit-box-ordinal-group: 0;
         -webkit-order: -1;
             -ms-flex-order: -1;
-                order: -1; } }
+                order: -1;
+        height: 85px; }
+      .footer-wrap .copyright-text {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; } }

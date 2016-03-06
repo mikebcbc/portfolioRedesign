@@ -12,8 +12,9 @@
 		margin-bottom: auto;
 		text-decoration: none;
     	transition: margin 250ms ease-in-out;
-    	position: relative;
-    	z-index: 1;
+		@media (max-width: 769px) {
+			display: none;		
+		}
     	&:hover:after {
 			margin: 0 auto;
 			border-top-color: #eafcff;
@@ -28,9 +29,6 @@
 			margin: -2px auto;
 			display: block;
 		    transition: margin 100ms linear;
-		    z-index: -1;
-		    left: 34%;
-		    position: absolute;
 		}
 		&.contact-cta-open {
 			margin-top: -35px;
@@ -53,14 +51,24 @@
     		}
 		}
 	}
-	svg {
-		path, rect {
-			stroke-dasharray: 1000;
-			stroke-dashoffset: 1000;
-			animation: fill-logo 0.4s linear 1.8s forwards,
-					   dash 2.7s linear forwards 0.5s;
-			fill-opacity: 0;
-			transform: translateX(-4px);
+	.logo {
+		@media (max-width: 769px) {
+			margin-top: -10px;
+			width: 150px;
+			order: -1;
+		}
+		svg {
+			@media (max-width: 769px) {
+				width: 100%;		
+			}
+			path, rect {
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+				animation: fill-logo 0.4s linear 1.8s forwards,
+						   dash 2.7s linear forwards 0.5s;
+				fill-opacity: 0;
+				transform: translateX(-4px);
+			}
 		}
 	}
 	.intro-container {

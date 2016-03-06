@@ -18,9 +18,14 @@
 	.social-icons {
 		width: 280px;
 		text-align: center;
-		img {
-			width: 39px;
-			margin: 0 10px;
+		height: 60px;
+		div {
+			display: inline-block;
+			font-size: 45px;
+			color: $lightblue-color;
+			&:hover {
+				color: $link-color;
+			}
 		}
 	}
 	@media (max-width: 769px) {
@@ -28,8 +33,13 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		padding-bottom: 10px;
 		.logo {
 			order: -1;
+			height: 85px;
+		}
+		.copyright-text {
+			order: 1;
 		}
 	}
 }

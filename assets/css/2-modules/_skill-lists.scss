@@ -39,10 +39,14 @@
 			right: 95%;
 			bottom: 2px;
 			left: 2px;
-			animation: fill 2s both;
 		}
+	}
+}
+
+.animating-bar li {
 		@for $i from 1 through 6 {
 			&:nth-child(#{$i}):after {
+				animation: fill 2s both;
 				animation-delay:(#{$i * 0.5}s);
 			}
 		}
@@ -65,7 +69,6 @@
 	      right: 2px;
 	    }
 	}
-}
 
 @keyframes fill {
   from {

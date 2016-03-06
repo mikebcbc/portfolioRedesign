@@ -13,10 +13,15 @@
 	box-sizing: border-box;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: $dosis;
 	color: $white-color;
 	background-color: $lightblue-color;
+	overflow-x: hidden;
 }
 
 p {
