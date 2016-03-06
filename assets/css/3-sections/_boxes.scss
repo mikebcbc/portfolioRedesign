@@ -103,6 +103,7 @@
 		p {
 			padding: 25px 10%;
 			background-color: $darkblue-color;
+			max-width: 100%;
 		}
 		@media (max-width: 769px) {
 			flex-basis: 100%;

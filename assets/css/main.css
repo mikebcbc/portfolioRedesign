@@ -2357,7 +2357,8 @@ menu {
 .skill-list {
   list-style: none;
   padding: 0;
-  color: #296061; }
+  color: #296061;
+  max-width: 100%; }
   .skill-list li {
     display: inline-block;
     position: relative;
@@ -2757,7 +2758,8 @@ menu {
       margin: 25px 0; }
     .boxes-wrap .box p {
       padding: 25px 10%;
-      background-color: #296061; }
+      background-color: #296061;
+      max-width: 100%; }
     @media (max-width: 769px) {
       .boxes-wrap .box {
         -webkit-flex-basis: 100%;
