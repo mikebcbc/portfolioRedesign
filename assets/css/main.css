@@ -2506,8 +2506,9 @@ menu {
   .contact-bar .info {
     font-weight: bold;
     font-size: 1.8em;
-    color: #296061;
     font-family: "Lato", sans-serif; }
+    .contact-bar .info a {
+      color: #296061; }
     @media (max-width: 769px) {
       .contact-bar .info {
         font-size: 1.4em; } }

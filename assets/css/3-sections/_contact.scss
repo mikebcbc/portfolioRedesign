@@ -32,8 +32,10 @@
 	.info {
 		font-weight: bold;
 		font-size: 1.8em;
-		color: $darkblue-color;
 		font-family: $lato;
+		a {
+			color: $darkblue-color;
+		}
 		@media (max-width: 769px) {
 			font-size: 1.4em;
 		}
