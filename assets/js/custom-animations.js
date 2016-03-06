@@ -1,3 +1,5 @@
+// If object is in viewport
+
 ;(function($, win) {
   $.fn.inViewport = function(cb) {
      return this.each(function(i,el){
@@ -10,6 +12,8 @@
      });
   };
 }(jQuery, window));
+
+// Smooth scroling + close menu when clicked
 
 function scrollNav() {
   $('menu a').click(function(){  
@@ -25,23 +29,19 @@ scrollNav();
 
 
 $(document).ready(function(){
+	// Toggle menu when clicked
 	$('#nav-menu').click(function(){
 		$(this).toggleClass('open');
 		$('html').toggleClass('menu-active');
 	});
-
-	// $('.menu-item').click(function(){
-	// 	$('#nav-menu').trigger('click');
-	// });
-
+	// Contact bar toggls
 	$('.contact-cta').click(function() {
 		$('.contact-bar').toggleClass("contact-bar-open");
 		$('.contact-info').toggleClass("contact-info-open");
 		$('.contact-cta').toggleClass("contact-cta-open");
 	});
-
+	// Show skill list when in view
 	$(".skill-list").inViewport(function(px){
 	    if(px) $(this).addClass("animating-bar") ;
 	});
-
 });

@@ -3,6 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var cleanCSS    = require('gulp-clean-css');
+var rename      = require('gulp-rename');
 
 
 
@@ -13,8 +15,16 @@ gulp.task('browser-refresh', function () {
     browserSync.reload();
 });
 
+/**
+* Gulp Minify CSS
+**/
 
-
+gulp.task('minify-css', function() {
+  return gulp.src('assets/css/main.css')
+    .pipe(cleanCSS())
+    .pipe(rename('main-min.css'))
+    .pipe(gulp.dest('assets/css'));
+});
 
 /**
  * Run browsersyc w/ sass.
@@ -54,6 +64,7 @@ gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['index.html'], ['browser-refresh']);
     gulp.watch(['assets/js/**'], ['browser-refresh']);
+    gulp.watch(['assets/css/main.css'], ['minify-css']);
 });
 
 

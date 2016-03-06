@@ -1,16 +1,30 @@
+/******* Tools *******/
+/******* Fonts *******/
 @import "0-tools/fonts";
 @import "0-tools/fontello";
+/******* Normalize css *******/
 @import "0-tools/normalize";
+/******* CSS3 Animate It *******/
 @import "0-tools/animations";
 
+/******* Base CSS *******/
 @import "1-base/variables";
 @import "1-base/base";
 
+/******* Modules *******/
+/******* Nav Button *******/
 @import "2-modules/nav-button";
+/******* Nav Menu *******/
 @import "2-modules/nav-menu";
+/******* Skills List Module *******/
 @import "2-modules/skill-lists";
 
+/******* Sections *******/
+/******* Contact *******/
 @import "3-sections/contact";
+/******* Intro *******/
 @import "3-sections/intro";
+/******* Main Boxes *******/
 @import "3-sections/boxes";
+/******* Footer *******/
 @import "3-sections/footer";

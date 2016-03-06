@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/******* Tools *******/
+/******* Fonts *******/
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 @import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
 @font-face {
@@ -57,6 +59,7 @@
   content: '\e802'; }
 
 /* '' */
+/******* Normalize css *******/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -415,10 +418,7 @@ td,
 th {
   padding: 0; }
 
-/*animations*/
-/******************
-* Bounce in right *
-*******************/
+/******* CSS3 Animate It *******/
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -443,7 +443,6 @@ th {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-/* Added by Andy Meetan */
 .delay-250 {
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s; }
@@ -517,9 +516,6 @@ th {
   -ms-transform: translateX(400px);
       transform: translateX(400px); }
 
-/***********
-* bounceIn *
-************/
 @-webkit-keyframes bounceIn {
   0% {
     opacity: 0;
@@ -552,9 +548,6 @@ th {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn; }
 
-/****************
-* bounceInRight *
-****************/
 @-webkit-keyframes bounceInRight {
   0% {
     opacity: 0;
@@ -587,9 +580,6 @@ th {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight; }
 
-/******************
-* Bounce in left *
-*******************/
 @-webkit-keyframes bounceInLeft {
   0% {
     opacity: 0;
@@ -622,9 +612,6 @@ th {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft; }
 
-/******************
-* Bounce in up *
-*******************/
 @-webkit-keyframes bounceInUp {
   0% {
     opacity: 0;
@@ -657,9 +644,6 @@ th {
   -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp; }
 
-/******************
-* Bounce in down *
-*******************/
 @-webkit-keyframes bounceInDown {
   0% {
     opacity: 0;
@@ -1945,9 +1929,6 @@ th {
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in; }
 
-/************
-* rotateOut *
-*************/
 @-webkit-keyframes rotateOut {
   0% {
     -webkit-transform-origin: center center;
@@ -1976,9 +1957,6 @@ th {
   -webkit-animation-name: rotateOut;
   animation-name: rotateOut; }
 
-/************
-* rotateOutUpLeft *
-*************/
 @-webkit-keyframes rotateOutUpLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2005,9 +1983,6 @@ th {
   -webkit-animation-name: rotateOutUpLeft;
   animation-name: rotateOutUpLeft; }
 
-/************
-* rotateOutDownLeft *
-*************/
 @-webkit-keyframes rotateOutDownLeft {
   0% {
     -webkit-transform-origin: left bottom;
@@ -2036,9 +2011,6 @@ th {
   -webkit-animation-name: rotateOutDownLeft;
   animation-name: rotateOutDownLeft; }
 
-/************
-* rotateOutUpRight *
-*************/
 @-webkit-keyframes rotateOutUpRight {
   0% {
     -webkit-transform-origin: right bottom;
@@ -2067,9 +2039,6 @@ th {
   -webkit-animation-name: rotateOutUpRight;
   animation-name: rotateOutUpRight; }
 
-/************
-* rollOut *
-*************/
 @-webkit-keyframes rollOut {
   0% {
     opacity: 1;
@@ -2092,12 +2061,6 @@ th {
   -webkit-animation-name: rollOut;
   animation-name: rollOut; }
 
-/*****************
-* Short Animations
-*******************/
-/*********************
-* fadeInUpShort
-*********************/
 @-webkit-keyframes fadeInUpShort {
   0% {
     opacity: 0;
@@ -2126,9 +2089,6 @@ th {
   -webkit-animation-name: fadeInUpShort;
   animation-name: fadeInUpShort; }
 
-/*********************
-* fadeInDownShort
-*********************/
 @-webkit-keyframes fadeInDownShort {
   0% {
     opacity: 0;
@@ -2157,9 +2117,6 @@ th {
   -webkit-animation-name: fadeInDownShort;
   animation-name: fadeInDownShort; }
 
-/*********************
-* fadeInRightShort 
-*********************/
 @-webkit-keyframes fadeInRightShort {
   0% {
     opacity: 0;
@@ -2188,9 +2145,6 @@ th {
   -webkit-animation-name: fadeInRightShort;
   animation-name: fadeInRightShort; }
 
-/*********************
-* fadeInLeftShort 
-*********************/
 @-webkit-keyframes fadeInLeftShort {
   0% {
     opacity: 0;
@@ -2219,6 +2173,7 @@ th {
   -webkit-animation-name: fadeInLeftShort;
   animation-name: fadeInLeftShort; }
 
+/******* Base CSS *******/
 /*** Set Font Size for Site **/
 :root {
   font-size: 18px; }
@@ -2258,6 +2213,8 @@ h2 {
 a {
   color: #ff8300; }
 
+/******* Modules *******/
+/******* Nav Button *******/
 .nav-wrap {
   margin-bottom: auto;
   width: 100px;
@@ -2333,6 +2290,7 @@ a {
       left: calc(50% - 5px);
       top: 24px; }
 
+/******* Nav Menu *******/
 menu {
   position: fixed;
   top: 0;
@@ -2394,6 +2352,7 @@ menu {
       -ms-transform: translateX(0);
           transform: translateX(0); }
 
+/******* Skills List Module *******/
 .skill-list {
   list-style: none;
   padding: 0;
@@ -2497,6 +2456,8 @@ menu {
   from {
     right: 100%; } }
 
+/******* Sections *******/
+/******* Contact *******/
 .contact-bar {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2550,6 +2511,7 @@ menu {
       .contact-bar .info {
         font-size: 1.4em; } }
 
+/******* Intro *******/
 .intro-wrap {
   background-image: url("../imgs/texture.png");
   background-color: #296061;
@@ -2669,6 +2631,7 @@ menu {
   to {
     fill-opacity: 1; } }
 
+/******* Main Boxes *******/
 .boxes-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2799,6 +2762,7 @@ menu {
             -ms-flex-preferred-size: 100%;
                 flex-basis: 100%; } }
 
+/******* Footer *******/
 .footer-wrap {
   display: -webkit-box;
   display: -webkit-flex;
