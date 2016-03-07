@@ -23,6 +23,7 @@
 			display: inline-block;
 			font-size: 45px;
 			color: $lightblue-color;
+			transition: color 200ms linear;
 			&:hover {
 				color: $link-color;
 			}

@@ -2796,7 +2796,9 @@ menu {
     .footer-wrap .social-icons div {
       display: inline-block;
       font-size: 45px;
-      color: #9cdade; }
+      color: #9cdade;
+      -webkit-transition: color 200ms linear;
+      transition: color 200ms linear; }
       .footer-wrap .social-icons div:hover {
         color: #ff8300; }
   @media (max-width: 769px) {
