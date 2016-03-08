@@ -51,22 +51,22 @@
 				animation-delay:(#{$i * 0.5}s);
 			}
 		}
-		&[type="html5-css3"]:after {
+		&.html5-css3:after {
 	      right: 2px;
 	    }
-	    &[type="sass"]:after {
+	    &.sass:after {
 	      right: 15%;
 	    }
-	    &[type="js"]:after {
+	    &.js:after {
 	      right: 25%;
 	    }
-	    &[type="js-frame"]:after {
+	    &.js-frame:after {
 	      right: 10%;
 	    }
-	    &[type="gulp"]:after {
+	    &.gulp:after {
 	      right: 20%;
 	    }
-	    &[type="seo"]:after {
+	    &.seo:after {
 	      right: 20%;
 	    }
 	}

@@ -2432,22 +2432,22 @@ menu {
   -webkit-animation-delay: 3s;
           animation-delay: 3s; }
 
-.animating-bar li[type="html5-css3"]:after {
+.animating-bar li.html5-css3:after {
   right: 2px; }
 
-.animating-bar li[type="sass"]:after {
+.animating-bar li.sass:after {
   right: 15%; }
 
-.animating-bar li[type="js"]:after {
+.animating-bar li.js:after {
   right: 25%; }
 
-.animating-bar li[type="js-frame"]:after {
+.animating-bar li.js-frame:after {
   right: 10%; }
 
-.animating-bar li[type="gulp"]:after {
+.animating-bar li.gulp:after {
   right: 20%; }
 
-.animating-bar li[type="seo"]:after {
+.animating-bar li.seo:after {
   right: 20%; }
 
 @-webkit-keyframes fill {
