@@ -4,6 +4,7 @@
 	align-items: center;
 	background-image: url('../imgs/texture.png');
 	background-color: $darkblue-color;
+	background-attachment: fixed;
 	padding: 0px 40px;
 	.copyright-text {
 		width: 280px;

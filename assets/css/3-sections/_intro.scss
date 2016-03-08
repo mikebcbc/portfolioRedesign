@@ -1,6 +1,7 @@
 .intro-wrap {
 	background-image: url('../imgs/texture.png');
 	background-color: $darkblue-color;
+	background-attachment: fixed;
 	padding: 10px;
 	.nav-logo {
 		display: flex;

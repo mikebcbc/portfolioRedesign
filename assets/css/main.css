@@ -2509,7 +2509,11 @@ menu {
     font-size: 1.8em;
     font-family: "Lato", sans-serif; }
     .contact-bar .info a {
-      color: #296061; }
+      color: #296061;
+      -webkit-transition: color 300ms linear;
+      transition: color 300ms linear; }
+      .contact-bar .info a:hover {
+        color: #ff8300; }
     @media (max-width: 769px) {
       .contact-bar .info {
         font-size: 1.4em; } }
@@ -2518,6 +2522,7 @@ menu {
 .intro-wrap {
   background-image: url("../imgs/texture.png");
   background-color: #296061;
+  background-attachment: fixed;
   padding: 10px; }
   .intro-wrap .nav-logo {
     display: -webkit-box;
@@ -2759,7 +2764,9 @@ menu {
     .boxes-wrap .box p {
       padding: 25px 10%;
       background-color: #296061;
-      max-width: 100%; }
+      max-width: 100%;
+      background-image: url(../imgs/texture.png);
+      background-attachment: fixed; }
     @media (max-width: 769px) {
       .boxes-wrap .box {
         -webkit-flex-basis: 100%;
@@ -2782,6 +2789,7 @@ menu {
           align-items: center;
   background-image: url("../imgs/texture.png");
   background-color: #296061;
+  background-attachment: fixed;
   padding: 0px 40px; }
   .footer-wrap .copyright-text {
     width: 280px;

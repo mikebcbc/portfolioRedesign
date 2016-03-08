@@ -35,6 +35,10 @@
 		font-family: $lato;
 		a {
 			color: $darkblue-color;
+			transition: color 300ms linear;
+			&:hover {
+				color: $link-color;
+			}
 		}
 		@media (max-width: 769px) {
 			font-size: 1.4em;
