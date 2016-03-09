@@ -16,7 +16,7 @@
 // Smooth scroling + close menu when clicked
 
 function scrollNav() {
-  $('menu a').click(function(){  
+  $('.menu a').click(function(){  
   	$('#nav-menu').trigger('click');
     $('html, body').stop().animate({
         scrollTop: $( $(this).attr('href') ).offset().top - 0

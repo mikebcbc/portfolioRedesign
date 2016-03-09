@@ -1,4 +1,4 @@
-menu {
+.menu {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -53,7 +53,7 @@ menu {
 	&, body {
 		overflow-y: hidden;
 	}
-	menu {
+	.menu {
 		transform: translateX(0);
 	}
 }

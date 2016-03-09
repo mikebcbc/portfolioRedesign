@@ -2292,7 +2292,7 @@ a {
       top: 24px; }
 
 /******* Nav Menu *******/
-menu {
+.menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -2311,10 +2311,10 @@ menu {
   padding: 50px 0;
   margin: 0;
   z-index: 1; }
-  menu ul {
+  .menu ul {
     list-style-type: none;
     padding: 0; }
-  menu li a {
+  .menu li a {
     display: block;
     margin: 15px 10px;
     padding-top: 20px;
@@ -2327,9 +2327,9 @@ menu {
     width: 150px;
     -webkit-transition: width 250ms ease-in-out;
     transition: width 250ms ease-in-out; }
-    menu li a:hover {
+    .menu li a:hover {
       width: 200px; }
-  menu .contact-menu a {
+  .menu .contact-menu a {
     background-color: #9cdade;
     text-align: center;
     padding: 10px;
@@ -2338,7 +2338,7 @@ menu {
     -webkit-transition: none;
     transition: none;
     width: 200px; }
-    menu .contact-menu a:hover {
+    .menu .contact-menu a:hover {
       color: #9cdade;
       background-color: #296061;
       outline: 4px solid #9cdade;
@@ -2348,7 +2348,7 @@ menu {
 .menu-active, .menu-active body {
   overflow-y: hidden; }
 
-.menu-active menu {
+.menu-active .menu {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0); }
