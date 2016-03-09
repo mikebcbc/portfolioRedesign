@@ -59,6 +59,9 @@
 				    margin-top: 10px;
 				    border: none;
 				    width: 200px;
+				    display: block;
+				    margin-left: auto;
+    				margin-right: auto;
 				    &:hover {
 				    	background-color: $darkblue-color;
 				    	outline: 4px solid $lightblue-color;
