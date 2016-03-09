@@ -47,25 +47,24 @@
 			h2 {
 				margin: 25px 0 0 0;
 			}
-			button {
-				background-color: #9cdade;
-			    text-align: center;
-			    padding: 6px 10px;
-			    margin-top: 10px;
-			    border: none;
-			    width: 200px;
-			    &:hover {
-			    	background-color: $darkblue-color;
-			    	outline: 4px solid $lightblue-color;
-			    	transition: outline 300ms ease-in-out;
-			    }
-			    a {
-			    	color: #296061;
-			    	&:hover {
-			    		color: $lightblue-color;
-			    	}
-			    }
-
+		    a {
+		    	color: #296061;
+		    	&:hover {
+		    		color: $lightblue-color;
+		    	}
+				button {
+					background-color: #9cdade;
+				    text-align: center;
+				    padding: 6px 10px;
+				    margin-top: 10px;
+				    border: none;
+				    width: 200px;
+				    &:hover {
+				    	background-color: $darkblue-color;
+				    	outline: 4px solid $lightblue-color;
+				    	transition: outline 300ms ease-in-out;
+				    }
+				}
 			}
 			@media (max-width: 769px) {
 				border-right: none;
