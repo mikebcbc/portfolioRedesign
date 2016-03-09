@@ -37,11 +37,35 @@
 		display: flex;
 		width: 100vw;
 		flex-wrap: wrap;
+		#blog-img {
+			border-radius: 10%;
+		}
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-top: 5px solid $darkblue-color;
+			padding-bottom: 0;
 			h2 {
 				margin: 25px 0 0 0;
+			}
+			button {
+				background-color: #9cdade;
+			    text-align: center;
+			    padding: 6px 10px;
+			    margin-top: 10px;
+			    border: none;
+			    width: 200px;
+			    &:hover {
+			    	background-color: $darkblue-color;
+			    	outline: 4px solid $lightblue-color;
+			    	transition: outline 300ms ease-in-out;
+			    }
+			    a {
+			    	color: #296061;
+			    	&:hover {
+			    		color: $lightblue-color;
+			    	}
+			    }
+
 			}
 			@media (max-width: 769px) {
 				border-right: none;
