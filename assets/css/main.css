@@ -2205,10 +2205,13 @@ h1, h2, h3 {
   padding: 0; }
 
 h1 {
-  font-size: 5.55em; }
+  font-size: 4.5em; }
 
 h2 {
   font-size: 2.85em; }
+
+h3 {
+  font-size: 2.5em; }
 
 a {
   color: #ff8300;
@@ -2611,10 +2614,32 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center; }
+    text-align: center;
+    margin: 35px 0; }
     .intro-wrap .intro-container .greeting {
-      margin-bottom: 35px;
       color: #9cdade; }
+    .intro-wrap .intro-container .subtitle-container {
+      position: relative;
+      margin-bottom: 10px; }
+      .intro-wrap .intro-container .subtitle-container .subtitle:before, .intro-wrap .intro-container .subtitle-container .subtitle:after {
+        content: "";
+        position: absolute;
+        height: 0px;
+        border-top: 2px solid #fff;
+        top: 30px;
+        width: 0%;
+        -webkit-animation: expand-width 500ms linear;
+                animation: expand-width 500ms linear;
+        -webkit-animation-delay: 2.7s;
+                animation-delay: 2.7s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards; }
+      .intro-wrap .intro-container .subtitle-container .subtitle:before {
+        right: 100%;
+        margin-right: 15px; }
+      .intro-wrap .intro-container .subtitle-container .subtitle:after {
+        left: 100%;
+        margin-left: 15px; }
     .intro-wrap .intro-container .intro-copy {
       width: 50%;
       margin-bottom: 35px;
@@ -2638,6 +2663,14 @@ a {
 @keyframes fill-logo {
   to {
     fill-opacity: 1; } }
+
+@-webkit-keyframes expand-width {
+  to {
+    width: 50%; } }
+
+@keyframes expand-width {
+  to {
+    width: 50%; } }
 
 /******* Main Boxes *******/
 .boxes-wrap {
