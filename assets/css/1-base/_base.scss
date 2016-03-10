@@ -37,6 +37,9 @@ h1,h2,h3 {
 
 h1 {
 	font-size: 4.5em;
+	@media (max-width: 769px) {
+		font-size: 4em;
+	}
 }
 
 h2 {
@@ -44,7 +47,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 }
 
 a {

@@ -95,6 +95,9 @@
 				    animation: expand-width 500ms linear;
 				    animation-delay: 2.7s;
 				    animation-fill-mode: forwards;
+				    @media (max-width: 769px) {
+						display: none;
+					}
 				}
 				&:before {
 					right: 100%;

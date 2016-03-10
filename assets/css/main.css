@@ -2206,12 +2206,15 @@ h1, h2, h3 {
 
 h1 {
   font-size: 4.5em; }
+  @media (max-width: 769px) {
+    h1 {
+      font-size: 4em; } }
 
 h2 {
   font-size: 2.85em; }
 
 h3 {
-  font-size: 2.5em; }
+  font-size: 2.3em; }
 
 a {
   color: #ff8300;
@@ -2634,6 +2637,9 @@ a {
                 animation-delay: 2.7s;
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards; }
+        @media (max-width: 769px) {
+          .intro-wrap .intro-container .subtitle-container .subtitle:before, .intro-wrap .intro-container .subtitle-container .subtitle:after {
+            display: none; } }
       .intro-wrap .intro-container .subtitle-container .subtitle:before {
         right: 100%;
         margin-right: 15px; }
