@@ -37,9 +37,6 @@
 		display: flex;
 		width: 100vw;
 		flex-wrap: wrap;
-		#blog-img {
-			border-radius: 10%;
-		}
 		.left-box {
 			border-right: 5px solid $darkblue-color;
 			border-top: 5px solid $darkblue-color;
@@ -116,6 +113,7 @@
 		width: 50%;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		h2 {
 			color: $darkblue-color;
 		}
@@ -123,7 +121,7 @@
 			width: 200px;
 			height: 200px;
 			border-radius: 50%;
-			box-shadow: 0 0 10px #222;
+			// box-shadow: 0 0 10px #222;
 			margin: 25px 0;
 		}
 		p {

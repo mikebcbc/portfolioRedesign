@@ -130,13 +130,17 @@
 				<div class="right-box box" id="aboutme">
 					<div class="animate-wrap animatedParent animateOnce"><h2 class="box-heading animated growIn">About Me</h2></div>
 					<img src="assets/imgs/mike-constantino-photo.jpg" alt="Mike Constantino Front Photo">
-					<p class="box-copy">Born in Canada, Mike is the son of two Brazilian parents, and the grandson of Italian and German grandparents. Mike enjoys blogging, coding, and learning about new front end development tools.</p>
+					<p class="box-copy">I was born in Canada, and am the son of two Brazilian parents and the grandson of Italian and German grandparents. Family reunions are hard. I enjoy blogging, coding, and learning new front end development tools.</p>
 				</div>
 			</div>
 			<div class="bottom-boxes">
 				<div class="left-box box" id="blog">
 					<div class="animate-wrap animatedParent animateOnce"><h2 class="box-heading animated growIn">Blog</h2></div>
-					<img src="assets/imgs/lets-start-blogging.jpg" alt="Blog Coming Soon" id="blog-img">
+					<div class="article-container cycle-slideshow" data-cycle-fx=carousel data-cycle-timeout=2100 data-cycle-carousel-fluid=true data-cycle-slides="div" data-cycle-carousel-visible=2 data-cycle-pause-on-hover="true" >
+						<div class="article-1"><a href="blog/posts/lets-start-blogging"><img src="assets/imgs/lets-start-blogging.jpg" alt="Let's Start Blogging" class="blog-img"></a></div>
+						<div class="article-2"><a href="/blog/posts/automated-development-with-gulpjs"><img src="assets/imgs/automated-development-gulp-js.jpg" alt="Automated Development with gulp.js" class="blog-img"></a></div>
+					</div>
+
 					<p class="box-copy">I've started writing about tons of great stuff like new technologies for a front end developer, politics, and religion - all in a non-offensive way.<a href="/blog/" id="blog-cta"><button>Catch me every Monday</button></a></p>
 				</div>
 				<div class="right-box box" id="skills">
@@ -202,6 +206,8 @@
 		</div>
 	</div>
 <script src="assets/js/jquery-2.2.1.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.carousel.js"></script>
 <script src="assets/js/custom-animations.js"></script>
 <script src="assets/js/css3-animate-it.js"></script>
 </body>
