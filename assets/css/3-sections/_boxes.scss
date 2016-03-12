@@ -87,12 +87,12 @@
 	}
 	.left-box {
 		flex-direction: column;
-		p {
+		.box-copy {
 		margin-bottom: 25px;
 		}
 		@media (max-width: 769px) {
 			flex-direction: column;
-			p {
+			.box-copy {
 				margin-top: 25px;
 			}
 		}
@@ -124,7 +124,7 @@
 			// box-shadow: 0 0 10px #222;
 			margin: 25px 0;
 		}
-		p {
+		.box-copy {
 			padding: 25px 10%;
 			background-color: $darkblue-color;
 			max-width: 100%;
