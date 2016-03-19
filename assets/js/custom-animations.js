@@ -45,3 +45,8 @@ $(document).ready(function(){
 	    if(px) $(this).addClass("animating-bar") ;
 	});
 });
+
+$(window).load(function() {
+  // Stop animations until page load
+  $(".logo").removeClass("preload");
+});

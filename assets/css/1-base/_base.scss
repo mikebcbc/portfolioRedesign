@@ -54,3 +54,7 @@ a {
 	color: $link-color;
 	text-decoration: none;
 }
+
+.preload rect, .preload path {
+	animation: none!important;
+}

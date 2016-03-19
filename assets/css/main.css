@@ -2220,6 +2220,10 @@ a {
   color: #ff8300;
   text-decoration: none; }
 
+.preload rect, .preload path {
+  -webkit-animation: none !important;
+          animation: none !important; }
+
 /******* Modules *******/
 /******* Nav Button *******/
 .nav-wrap {
